@@ -1,0 +1,259 @@
+/* These are the basic settings for the whole page */
+body {
+    background: linear-gradient(135deg, #2d5a2d 0%, #4a8f4a 50%, #66bb66 100%);    /* Green gradient background */
+    margin: 0;                       /* Removes space around the edge of the page */
+    padding: 20px;                   /* Adds space inside the page */
+    font-family: Arial, sans-serif;  /* Makes the text easy to read */
+    min-height: 100vh;               /* Makes gradient fill entire screen */
+}
+
+/* This is our main content box */
+.container {
+    max-width: 1000px;               /* Makes sure content isn't too wide */
+    margin: 0 auto;                  /* Centers everything on the page */
+    padding: 20px;                   /* Adds space inside the container */
+    background-color: rgba(255, 255, 255, 0.9);  /* White box with slight see-through */
+    border-radius: 10px;             /* Rounds the corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    /* Adds a soft shadow */
+    text-align: center;              /* Centers all the text */
+}
+
+/* This is how elements look before they fade in */
+.animate-item {
+    opacity: 0;                      /* Makes elements invisible at first */
+    transform: translateY(20px);     /* Moves elements down a bit */
+}
+
+/* Centers the image and makes it circular */
+.profile-image {
+    width: 250px;                    /* Sets image width */
+    height: 250px;                   /* Sets image height */
+    border-radius: 50%;              /* Makes image circular */
+    object-fit: cover;               /* Keeps image from stretching */
+    margin: 20px auto;               /* Centers image with space around it */
+    display: block;                  /* Makes image behave like a block element */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow around image */
+}
+
+/* Two column layout container - THIS MAKES THEM ALIGNED */
+.two-column {
+    display: flex;                   /* Uses flexbox for side-by-side layout */
+    gap: 40px;                       /* Adds space between left and right columns */
+    margin: 30px 0;                  /* Adds space above and below */
+    justify-content: center;         /* Centers the columns */
+    align-items: flex-start;         /* Aligns items to the top */
+}
+
+/* Left side styling */
+.left-side {
+    flex: 1;                         /* Takes up equal width */
+    min-width: 300px;                /* Minimum width for small screens */
+    text-align: left;                /* Aligns text to the left */
+    padding: 20px;                   /* Adds padding inside */
+    background-color: rgba(240, 240, 240, 0.5);  /* Light gray background */
+    border-radius: 8px;              /* Rounded corners */
+}
+
+.left-side h2 {
+    margin-top: 0;                   /* Removes top margin from heading */
+    text-align: center;              /* Centers the heading */
+}
+
+/* Right side styling */
+.right-side {
+    flex: 1;                         /* Takes up equal width */
+    min-width: 300px;                /* Minimum width for small screens */
+    text-align: left;                /* Aligns text to the left */
+    padding: 20px;                   /* Adds padding inside */
+    background-color: rgba(240, 240, 240, 0.5);  /* Light gray background */
+    border-radius: 8px;              /* Rounded corners */
+}
+
+.right-side h2 {
+    margin-top: 0;                   /* Removes top margin from heading */
+    text-align: center;              /* Centers the heading */
+}
+
+/* Makes lists look nice */
+ul, ol {
+    display: block;                  /* Makes lists display normally */
+    text-align: left;               /* Keeps list items easy to read */
+    margin: 15px 0;                 /* Adds space around lists */
+    padding-left: 0;                /* Removes default left padding */
+    list-style: none;               /* Removes bullet points and numbers */
+}
+
+/* STYLISH LIST ITEMS - Same style as hyperlinks */
+li {
+    display: inline-block;           /* Makes list item behave like a box */
+    padding: 10px 20px;              /* Adds padding inside (top/bottom, left/right) */
+    margin: 8px 0;                   /* Adds space around each list item */
+    background-color: #218838;       /* Green background color */
+    color: white;                    /* White text color */
+    text-decoration: none;           /* Removes underline from text */
+    border-radius: 20px;             /* Makes rounded pill shape corners */
+    font-weight: bold;               /* Makes text thicker and bolder */
+    transition: all 0.3s ease;       /* Smooth animation effect on hover (0.3 seconds) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Adds shadow effect under list item */
+}
+
+/* Hover effect for list items - What happens when you move mouse over list item */
+li:hover {
+    background-color: #05350f;       /* Darker green color on hover */
+    transform: translateY(-3px);     /* Moves list item up 3 pixels when hovering */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger and darker */
+}
+
+/* Active state when clicking - What happens when you click the list item */
+li:active {
+    transform: translateY(-1px);     /* Slightly moves when actively clicking */
+}
+
+/* STYLISH WEBSITE LINKS - This makes links look cool */
+.website-link {
+    display: inline-block;           /* Makes link behave like a box */
+    padding: 10px 20px;              /* Adds padding inside link (top/bottom, left/right) */
+    margin: 8px 0;                   /* Adds space around link */
+    background-color: #077736;       /* Blue background color */
+    color: white;                    /* White text color */
+    text-decoration: none;           /* Removes underline from text */
+    border-radius: 20px;             /* Makes rounded pill shape corners */
+    font-weight: bold;               /* Makes text thicker and bolder */
+    transition: all 0.3s ease;       /* Smooth animation effect on hover (0.3 seconds) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Adds shadow effect under link */
+}
+
+/* Hover effect for website links - What happens when you move mouse over link */
+.website-link:hover {
+    background-color: #0056b3;       /* Darker blue color on hover */
+    transform: translateY(-3px);     /* Moves link up 3 pixels when hovering */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger and darker */
+}
+
+/* Active state when clicking - What happens when you click the link */
+.website-link:active {
+    transform: translateY(-1px);     /* Slightly moves when actively clicking */
+}
+
+/* Makes headings interactive */
+h1, h2 {
+    transition: transform 0.3s ease; /* Makes size changes smooth */
+}
+
+/* Heading hover effect */
+h1:hover, h2:hover {
+    transform: scale(1.05);          /* Makes headings 5% bigger when hovering */
+}
+
+/* This is how elements look after they fade in */
+.visible {
+    opacity: 1;                     /* Makes elements fully visible */
+    transform: translateY(0);        /* Moves elements to final position */
+    transition: all 0.5s ease;      /* Makes the animation smooth (0.5 seconds) */
+}
+
+/* Hover effect for regular links */
+a {
+    color: #0066cc;                 /* Makes links blue */
+    text-decoration: none;          /* Removes underline from links */
+    transition: all 0.3s ease;      /* Smooth color change on hover */
+}
+
+a:hover {
+    color: #004499;                 /* Darker blue when you hover */
+    text-decoration: underline;     /* Adds underline on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;               /* Adds space above footer */
+    padding-top: 20px;              /* Adds padding inside footer */
+    border-top: 1px solid #ddd;     /* Adds thin gray line above footer */
+    text-align: center;             /* Centers footer text */
+}
+
+/* Mobile responsive design - Makes page work on phones */
+@media (max-width: 768px) {
+    .two-column {
+        flex-direction: column;      /* Stacks columns vertically on small screens */
+        gap: 20px;                   /* Reduces gap on small screens */
+    }
+}
+/* Achievements section styling */
+.achievements {
+    margin-top: 40px;               /* Adds space above achievements section */
+    padding: 30px;                  /* Adds padding inside section */
+    background-color: rgba(240, 240, 240, 0.5);  /* Light gray background */
+    border-radius: 8px;             /* Rounded corners */
+}
+
+.achievements h2 {
+    text-align: center;             /* Centers the heading */
+    margin-bottom: 15px;            /* Adds space below heading */
+}
+
+.achievements p {
+    text-align: center;             /* Centers the paragraph text */
+    margin-bottom: 20px;            /* Adds space below paragraph */
+}
+
+/* Images gallery container */
+.images-gallery {
+    display: flex;                  /* Uses flexbox for side-by-side layout */
+    gap: 20px;                      /* Adds space between images */
+    justify-content: center;        /* Centers the images */
+    flex-wrap: wrap;                /* Wraps images to next line if needed */
+    margin-top: 20px;               /* Adds space above gallery */
+}
+
+/* Individual image item styling */
+.image-item {
+    display: flex;                  /* Centers content inside */
+    justify-content: center;        /* Centers horizontally */
+    align-items: center;            /* Centers vertically */
+}
+
+/* Achievement image styling */
+.achievement-image {
+    max-width: 550px;               /* Maximum width of image */
+    height: auto;                   /* Keeps aspect ratio */
+    border-radius: 10px;            /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow */
+    transition: all 0.3s ease;      /* Smooth animation on hover */
+}
+
+/* Hover effect for achievement images */
+.achievement-image:hover {
+    transform: scale(1.1);          /* Makes image 10% bigger on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger */
+}
+/* Achievement image styling */
+.achievement-image {
+    max-width: 550px;               /* Maximum width of image */
+    height: auto;                   /* Keeps aspect ratio */
+    border-radius: 10px;            /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow */
+    transition: all 0.3s ease;      /* Smooth animation on hover */
+}
+
+/* Hover effect for achievement images */
+.achievement-image:hover {
+    transform: scale(1.1);          /* Makes image 10% bigger on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger */
+}
+
+/* Special sizing for vacation images to make them uniform */
+.vacation-image {
+    width: 250px;                   /* Fixed width for all vacation images */
+    height: 250px;                  /* Fixed height for all vacation images */
+    object-fit: cover;              /* Crops image to fit the square size */
+    border-radius: 10px;            /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow */
+    transition: all 0.3s ease;      /* Smooth animation on hover */
+}
+
+/* Hover effect for vacation images */
+.vacation-image:hover {
+    transform: scale(1.1);          /* Makes image 10% bigger on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger */
+}
