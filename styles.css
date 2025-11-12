@@ -257,3 +257,50 @@ footer {
     transform: scale(1.1);          /* Makes image 10% bigger on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Makes shadow bigger */
 }
+
+/* Category navigation (tabs/buttons) */
+.category-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #218838; /* same green as list items */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+    transform: translateY(-3px);
+    outline: none;
+}
+
+.nav-btn.active {
+    background: #05350f; /* darker green to indicate active */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Tab sections: hide by default, show when active */
+.tab-section {
+    display: none;
+    text-align: center;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+/* Smooth scrolling for anchor jumps and keyboard focus */
+html {
+    scroll-behavior: smooth;
+}
